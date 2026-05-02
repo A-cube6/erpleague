@@ -6,24 +6,24 @@ import { Container } from "@/components/Container";
 export const metadata: Metadata = {
   title: "Client Portal Preview",
   description:
-    "ERPLeague Australia client portal preview for future registered and subscriber cloud products, support workspaces, and ERP tools.",
+    "ERPLeague Australia client portal preview for  registered and subscriber cloud products, support workspaces, and ERP tools.",
 };
 
 const plannedProducts = [
   {
     title: "ERP Health Check Dashboard",
     status: "Planned",
-    description: "A future client dashboard for ERP maturity, support risks, process pain points, and improvement actions.",
+    description: "A  client dashboard for ERP maturity, support risks, process pain points, and improvement actions.",
   },
   {
     title: "SAP Support Workspace",
     status: "Planned",
-    description: "A future place to track support requests, priorities, knowledge notes, and engagement artefacts.",
+    description: "A  place to track support requests, priorities, knowledge notes, and engagement artefacts.",
   },
   {
     title: "Automation & Reporting Toolkit",
     status: "Planned",
-    description: "A future launchpad for small ERP automation, reporting, and process visibility tools.",
+    description: "A  launchpad for small ERP automation, reporting, and process visibility tools.",
   },
 ];
 
@@ -37,10 +37,10 @@ export default function PortalPage() {
           </div>
           <p className="text-xs font-black uppercase tracking-[0.28em] text-cyan-600">Client Portal</p>
           <h1 className="mt-4 text-balance text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">
-            Future subscriber access for ERPLeague cloud products
+            Subscriber access for ERPLeague cloud products
           </h1>
           <p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
-            This portal page is a professional placeholder for future registered-client access. Authentication, subscriptions, product dashboards, and secure data storage can be added later using Vercel, Supabase, and API routes.
+            This portal page is a professional placeholder for  registered-client access. Authentication, subscriptions, product dashboards, and secure data storage can be added later using Vercel, Supabase, and API routes.
           </p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
             <ButtonLink href="/#contact" className="w-full sm:w-auto">

@@ -15,7 +15,7 @@ export default function PrivacyPage() {
           <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-950">Privacy Policy</h1>
           <div className="mt-8 space-y-6 text-base leading-8 text-slate-600 sm:text-lg">
             <p>
-              This is a placeholder privacy policy page for ERPLeague Australia. Replace this content with a formal policy reviewed for your business, jurisdiction, analytics setup, enquiry form handling, and any future client portal or subscription features.
+              This is a placeholder privacy policy page for ERPLeague Australia. Replace this content with a formal policy reviewed for your business, jurisdiction, analytics setup, enquiry form handling, and any  client portal or subscription features.
             </p>
             <p>
               At this stage, the enquiry form API route validates and logs submitted enquiries on the server. When email, CRM, database storage, analytics, or authentication is added, update this page to describe the data collected and how it is used.

@@ -12,7 +12,7 @@ export function ContactSection() {
           <SectionHeader
             eyebrow="Contact"
             title="Start with a practical ERP conversation"
-            description="Use the form to request a 30-minute ERP Health Check, discuss support needs, or explore a future cloud product/portal use case."
+            description="Use the form to request a 30-minute ERP Health Check, discuss support needs, or explore a  cloud product/portal use case."
           />
           <div className="mt-8 grid gap-4">
             <ContactItem icon={Phone} label="Phone" value={siteConfig.phone} />

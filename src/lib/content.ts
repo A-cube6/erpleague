@@ -98,7 +98,7 @@ export const healthCheckItems = [
 export const portalFeatures = [
   {
     title: "Registered client access",
-    text: "A future private area for approved clients, project stakeholders, and subscribers.",
+    text: "A  private area for approved clients, project stakeholders, and subscribers.",
   },
   {
     title: "Cloud product launchpad",
@@ -106,6 +106,6 @@ export const portalFeatures = [
   },
   {
     title: "Support and advisory workspace",
-    text: "A future home for support requests, engagement artefacts, shared documents, and service reports.",
+    text: "A  home for support requests, engagement artefacts, shared documents, and service reports.",
   },
 ];

@@ -91,7 +91,7 @@ export function Hero() {
             </div>
 
             <div className="relative mt-5 rounded-3xl bg-white p-5 text-slate-950 shadow-xl shadow-black/10">
-              <p className="text-sm font-bold text-cyan-700">Future-ready section included</p>
+              
               <p className="mt-1 text-xl font-black tracking-tight">Client portal foundation</p>
               <p className="mt-3 text-sm leading-6 text-slate-600">
                 A dedicated portal page is included now, ready to evolve into a private subscriber area for ERPLeague cloud products.

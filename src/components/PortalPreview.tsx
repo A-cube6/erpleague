@@ -13,7 +13,7 @@ export function PortalPreview() {
         <div>
           <SectionHeader
             eyebrow="Client portal"
-            title="A future cloud product home for registered and subscriber clients"
+            title="A  cloud product home for registered and subscriber clients"
             description="The site includes a client portal entry point now. It is designed as a professional placeholder until authentication, subscriptions, product dashboards, and secure client workspaces are added later."
           />
           <ButtonLink href="/portal" variant="secondary" className="mt-8 w-full sm:w-auto">
