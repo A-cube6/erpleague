@@ -54,7 +54,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-5 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl shadow-slate-950/5 sm:p-8">
+    <form onSubmit={handleSubmit} className="premium-card grid gap-5 rounded-[2rem] p-6 sm:p-8">
       <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <div className="grid gap-5 sm:grid-cols-2">
@@ -66,14 +66,14 @@ export function ContactForm() {
         <Field label="Company" name="company" autoComplete="organization" />
       </div>
       <div>
-        <label htmlFor="serviceInterest" className="mb-2 block text-sm font-semibold text-slate-800">
+        <label htmlFor="serviceInterest" className="mb-2 block text-sm font-bold text-slate-800">
           Service interest
         </label>
         <select
           id="serviceInterest"
           name="serviceInterest"
           required
-          className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-sky-500 focus:ring-4 focus:ring-sky-100"
+          className="input-glass w-full rounded-2xl px-4 py-3 text-slate-950 outline-none"
         >
           <option value="">Select a service</option>
           {serviceOptions.map((option) => (
@@ -84,7 +84,7 @@ export function ContactForm() {
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-semibold text-slate-800">
+        <label htmlFor="message" className="mb-2 block text-sm font-bold text-slate-800">
           Message
         </label>
         <textarea
@@ -93,19 +93,21 @@ export function ContactForm() {
           rows={5}
           required
           placeholder="Tell us briefly about your SAP/ERP environment, pain point, or project need."
-          className="w-full resize-none rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-sky-500 focus:ring-4 focus:ring-sky-100"
+          className="input-glass w-full resize-none rounded-2xl px-4 py-3 text-slate-950 outline-none"
         />
       </div>
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-950/15 transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
+        className="glass-hover inline-flex min-h-12 items-center justify-center rounded-full border border-cyan-400/70 bg-[linear-gradient(135deg,#071526_0%,#063d5f_52%,#00a7d8_100%)] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(0,119,190,0.24)] disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "submitting" ? "Sending..." : "Submit enquiry"}
-        <Send className="ml-2 h-4 w-4" aria-hidden="true" />
+        <span className="relative z-10 inline-flex items-center">
+          {status === "submitting" ? "Sending..." : "Submit enquiry"}
+          <Send className="ml-2 h-4 w-4" aria-hidden="true" />
+        </span>
       </button>
       {message ? (
-        <p className={`rounded-2xl px-4 py-3 text-sm font-medium ${status === "success" ? "bg-emerald-50 text-emerald-700" : "bg-red-50 text-red-700"}`}>
+        <p className={`rounded-2xl px-4 py-3 text-sm font-semibold ${status === "success" ? "bg-emerald-50 text-emerald-700" : "bg-red-50 text-red-700"}`}>
           {message}
         </p>
       ) : null}
@@ -124,7 +126,7 @@ type FieldProps = {
 function Field({ label, name, type = "text", autoComplete, required = false }: FieldProps) {
   return (
     <div>
-      <label htmlFor={name} className="mb-2 block text-sm font-semibold text-slate-800">
+      <label htmlFor={name} className="mb-2 block text-sm font-bold text-slate-800">
         {label}
       </label>
       <input
@@ -133,7 +135,7 @@ function Field({ label, name, type = "text", autoComplete, required = false }: F
         type={type}
         autoComplete={autoComplete}
         required={required}
-        className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-sky-500 focus:ring-4 focus:ring-sky-100"
+        className="input-glass w-full rounded-2xl px-4 py-3 text-slate-950 outline-none"
       />
     </div>
   );

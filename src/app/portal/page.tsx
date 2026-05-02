@@ -29,24 +29,24 @@ const plannedProducts = [
 
 export default function PortalPage() {
   return (
-    <section className="bg-[radial-gradient(circle_at_top_right,#e0f2fe,transparent_32%),linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] py-20 sm:py-24">
-      <Container>
+    <section className="section-shell bg-[linear-gradient(135deg,#f7fdff_0%,#eef9ff_46%,#ffffff_100%)] py-16 sm:py-20 lg:py-24">
+      <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-950 text-sky-300 shadow-xl shadow-slate-950/20">
+          <div className="glass-surface mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-3xl text-cyan-700">
             <LockKeyhole className="h-8 w-8" aria-hidden="true" />
           </div>
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-600">Client Portal</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-cyan-600">Client Portal</p>
+          <h1 className="mt-4 text-balance text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">
             Future subscriber access for ERPLeague cloud products
           </h1>
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
             This portal page is a professional placeholder for future registered-client access. Authentication, subscriptions, product dashboards, and secure data storage can be added later using Vercel, Supabase, and API routes.
           </p>
-          <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-            <ButtonLink href="/#contact">
+          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+            <ButtonLink href="/#contact" className="w-full sm:w-auto">
               Enquire about portal access <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </ButtonLink>
-            <ButtonLink href="/" variant="secondary">
+            <ButtonLink href="/" variant="secondary" className="w-full sm:w-auto">
               Back to website
             </ButtonLink>
           </div>
@@ -54,32 +54,32 @@ export default function PortalPage() {
 
         <div className="mt-16 grid gap-5 md:grid-cols-3">
           {plannedProducts.map((product) => (
-            <article key={product.title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <article key={product.title} className="glass-hover premium-card rounded-[1.75rem] p-6">
               <div className="mb-5 flex items-center justify-between gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-50 text-cyan-700 ring-1 ring-cyan-100">
                   <Boxes className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600">
+                <span className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-cyan-700 ring-1 ring-cyan-100">
                   {product.status}
                 </span>
               </div>
-              <h2 className="text-xl font-semibold text-slate-950">{product.title}</h2>
+              <h2 className="text-xl font-black tracking-tight text-slate-950">{product.title}</h2>
               <p className="mt-3 text-base leading-7 text-slate-600">{product.description}</p>
             </article>
           ))}
         </div>
 
         <div className="mt-16 grid gap-5 rounded-[2rem] bg-slate-950 p-6 text-white shadow-2xl shadow-slate-950/15 md:grid-cols-2 lg:p-8">
-          <div className="rounded-3xl bg-white/[0.06] p-6 ring-1 ring-white/10">
-            <Sparkles className="h-8 w-8 text-sky-300" aria-hidden="true" />
-            <h2 className="mt-4 text-2xl font-semibold">Suggested next build phase</h2>
+          <div className="glass-hover rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl">
+            <Sparkles className="h-8 w-8 text-cyan-300" aria-hidden="true" />
+            <h2 className="mt-4 text-2xl font-black tracking-tight">Suggested next build phase</h2>
             <p className="mt-3 text-base leading-7 text-slate-300">
               Add Supabase authentication, organisation-level roles, subscription status, and a secure dashboard layout for approved clients.
             </p>
           </div>
-          <div className="rounded-3xl bg-white/[0.06] p-6 ring-1 ring-white/10">
-            <ShieldCheck className="h-8 w-8 text-sky-300" aria-hidden="true" />
-            <h2 className="mt-4 text-2xl font-semibold">Security note</h2>
+          <div className="glass-hover rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl">
+            <ShieldCheck className="h-8 w-8 text-cyan-300" aria-hidden="true" />
+            <h2 className="mt-4 text-2xl font-black tracking-tight">Security note</h2>
             <p className="mt-3 text-base leading-7 text-slate-300">
               This version does not store client data or expose private products. It is safe as a public placeholder until backend access control is added.
             </p>

@@ -6,8 +6,8 @@ import { SectionHeader } from "./SectionHeader";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-slate-50 py-24 sm:py-28">
-      <Container className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <section id="contact" className="section-shell bg-[#eef9ff] py-20 sm:py-24 lg:py-28">
+      <Container className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div>
           <SectionHeader
             eyebrow="Contact"
@@ -34,13 +34,13 @@ type ContactItemProps = {
 
 function ContactItem({ icon: Icon, label, value }: ContactItemProps) {
   return (
-    <div className="flex gap-4 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
+    <div className="glass-hover premium-card flex gap-4 rounded-3xl p-5">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-cyan-50 text-cyan-700 ring-1 ring-cyan-100">
         <Icon className="h-6 w-6" aria-hidden="true" />
       </div>
       <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{label}</p>
-        <p className="mt-1 text-base font-semibold text-slate-950">{value}</p>
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">{label}</p>
+        <p className="mt-1 text-base font-black text-slate-950">{value}</p>
       </div>
     </div>
   );

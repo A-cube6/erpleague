@@ -1,142 +1,123 @@
 # ERPLeague Australia Website
 
-A fresh, modern B2B website for ERPLeague Australia built with Next.js, TypeScript and Tailwind CSS.
+A fresh, premium Next.js website for **ERPLeague Australia** — a boutique Australian SAP and ERP services company.
 
-## What is included
+This version uses a cyan/blue ERPLeague-aligned theme, polished enterprise B2B spacing, responsive layouts, and iOS-style glass hover effects for clickable UI elements.
 
-- Next.js App Router project
+## Tech stack
+
+- Next.js
 - TypeScript
 - Tailwind CSS
-- Responsive mobile-first design
-- SEO metadata, sitemap and robots file
-- Reusable components:
-  - Navbar
-  - Hero
-  - ServiceCard
-  - IndustryCard
-  - CTA / Health Check section
-  - ContactForm
-  - Footer
-- Client Portal preview page for future registered/subscriber products
-- API route for enquiry form handling: `src/app/api/enquiry/route.ts`
-- Privacy Policy placeholder page
+- Next.js API route for enquiry form handling
+- Lucide React icons
 
-## Requirements
-
-Install Node.js 20 or newer if possible.
-
-## Install dependencies
-
-```bash
-npm install
-```
+No `node_modules` folder is included in this package.
 
 ## Run locally
 
 ```bash
+npm install
 npm run dev
 ```
 
-Open:
+Then open:
 
 ```text
 http://localhost:3000
 ```
 
-## Build production version
+## Build for production
 
 ```bash
 npm run build
-```
-
-## Start production build locally
-
-```bash
 npm run start
 ```
 
 ## Deploy to Vercel
 
-1. Push this project to a GitHub repository.
-2. Create a new Vercel project.
-3. Import the GitHub repository.
-4. Framework preset should be Next.js.
-5. Deploy.
+1. Push this project to GitHub.
+2. Import the GitHub repository into Vercel.
+3. Vercel should detect Next.js automatically.
+4. Use the default build command:
 
-No separate Express backend is required. The enquiry form uses a Next.js API route, which will run as a serverless function on Vercel.
+```bash
+npm run build
+```
+
+5. Use the default output handled by Next.js/Vercel.
+
+## Project structure
+
+```text
+src/app/page.tsx                 Main landing page
+src/app/portal/page.tsx          Client portal preview page
+src/app/privacy/page.tsx         Privacy placeholder
+src/app/api/enquiry/route.ts     Contact/enquiry API route
+src/components                   Reusable UI sections and cards
+src/lib/content.ts               Main editable website content
+src/app/globals.css              Theme, glass hover effects, global polish
+```
 
 ## Where to update content
 
-Main content lives here:
+Most website copy and structured content is in:
 
 ```text
 src/lib/content.ts
 ```
 
-Update this file for:
+Update services, industries, proof points, contact details and portal feature wording there.
 
-- Services
-- Industries
-- Proof points / typical outcomes
-- Health Check bullets
-- Portal feature copy
-- Email and phone details
+## Contact form
 
-Page structure lives here:
+The enquiry form posts to:
 
 ```text
-src/app/page.tsx
+/api/enquiry
 ```
 
-Reusable visual sections live here:
+Current behaviour:
 
-```text
-src/components/
-```
+- Validates required fields
+- Uses a hidden honeypot field for basic spam filtering
+- Logs the enquiry on the server
+- Returns a success response to the user
 
-## Contact form setup
-
-The contact form currently posts to:
+To integrate email or CRM later, update:
 
 ```text
 src/app/api/enquiry/route.ts
 ```
 
-At the moment, this route validates the enquiry and logs it on the server/Vercel console.
-
-Later you can integrate:
+Suggested future options:
 
 - Resend
 - SendGrid
 - Mailgun
-- Microsoft Graph
-- FormSubmit
-- Supabase table storage
-- CRM webhook
+- Supabase database insert
+- HubSpot or Zoho CRM API
 
-Look for comments inside `src/app/api/enquiry/route.ts`.
+## Current design notes
 
-## Client Portal next phase
+- Theme follows the existing ERPLeague website direction more closely: light blue/white/cyan with deep slate contrast.
+- Buttons and clickable areas use a global `glass-hover` effect inspired by modern iOS translucent interaction styles.
+- Cards and panels use `premium-card` and `glass-surface` utility classes in `globals.css`.
+- Layout is mobile-first and suitable for Australian enterprise SAP/ERP clients.
+- The client portal is a public placeholder only; no private data, authentication or subscriptions are implemented yet.
 
-The current portal page is a public placeholder:
+## Future portal build
 
-```text
-src/app/portal/page.tsx
-```
-
-Recommended future additions:
+Recommended next phase:
 
 - Supabase Auth
-- Organisation / tenant table
+- Organisation table
 - User roles: owner, admin, client, subscriber
-- Subscription status
-- Secure dashboard routes
-- Product cards connected to actual tools
-- Support request tracking
-- Document/report workspace
+- Subscription status table
+- Protected `/portal/dashboard` route
+- Client-specific products and reports
+- Enquiry-to-CRM/email integration
 
-## Notes
+## Important
 
-- `node_modules` is not included.
-- `.next` build output is not included.
-- Keep secrets out of source code. Use Vercel environment variables for API keys and provider credentials.
+Do not commit `node_modules` to GitHub.
